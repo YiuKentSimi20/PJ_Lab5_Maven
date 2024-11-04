@@ -1,10 +1,1 @@
-{
-  "name": "$name$",
-  "version": "$version$",
-  "description": "$END$",
-  "main": "$main$",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "private": true
-}
+[{"a":2,"b":5},{"a":34,"b":55},{"a":13,"b":21},{"a":10,"b":9},{"a":0,"b":0}]

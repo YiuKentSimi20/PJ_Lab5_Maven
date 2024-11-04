@@ -18,13 +18,23 @@ public class MainApp {
     }
     public static List<Persoana> citire() {
         try {
-            File file=new File("src/main/resources/persoane.json");
-            ObjectMapper mapper=new ObjectMapper();
-            List<Persoana> persoane = mapper
-                    .readValue(file, new TypeReference<List<Persoana>>(){});
+            File file = new File("src/main/resources/persoane.json");
+            ObjectMapper mapper = new ObjectMapper();
+            List<Persoana> persoane = mapper.readValue(file, new TypeReference<List<Persoana>>() {});
             return persoane;
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+        public static void main(String[] args) {
+            List<Persoana> persoane=citire();
+            System.out.println(persoane);
+            for(Persoana p:persoane){
+                System.out.println(p);
+            }
+            persoane.add(new Persoana("Maria",33));
+            scriere(persoane);
+        }
     }
