@@ -1,7 +1,6 @@
-package org.ex3;
+package org.Lab5.ex3;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 

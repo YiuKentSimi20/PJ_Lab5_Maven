@@ -1,4 +1,4 @@
-package org.ex3;
+package org.Lab5.ex3;
 
 import java.util.Arrays;
 

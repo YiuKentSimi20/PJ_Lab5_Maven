@@ -1,4 +1,4 @@
-package org.ex2;
+package org.Lab5.ex2;
 
 import java.math.*;
 

@@ -1,4 +1,4 @@
-package org.exemplul2;
+package org.Lab5.exemplul2;
 
 public class Calculator {
     private final int a;
