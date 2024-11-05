@@ -48,25 +48,25 @@ public class MainApp {
         angajati = citire();
 
 
-        //1
+        //1 ---Afisarea listei de angajati cu referinte la metode---
         Optional<List<Angajat>> opt = Optional.ofNullable(angajati);
         if(opt.isPresent()) {
-            System.out.println("---Afisarea cu referinte la metode---");
+            System.out.println("--- Afisarea cu referinte la metode ---");
             opt.get().forEach(System.out::println);
         }
         else {
             System.out.println("Lista goala");
         }
 
-        //2
-        System.out.println("\n---Angajati cu salar > 2500---");
+        //2 ---Afisarea angajatilor cu salar mai mare de 2500---
+        System.out.println("\n--- Angajati cu salar > 2500 ---");
         angajati
             .stream()
             .filter((a)->a.getSalar()>2500)
             .forEach(System.out::println);
 
-        //3
-        System.out.println("\n---Angajati in functii de conducere---");
+        //3 ---Afisarea angajatilor in functii de conducere din luna aprilie a anului trecut---
+        System.out.println("\n--- Angajati in functii de conducere(din aprilie anul trecut) ---");
         List<Angajat> angajati_sefi =
                 angajati
                         .stream()
@@ -84,8 +84,8 @@ public class MainApp {
 
         angajati_sefi.forEach(System.out::println);
 
-        //4
-        System.out.println("\n---Angajati care nu au fuctii de conducere in ordine descrescatoare dupa salariu---");
+        //4 ---Angajati care nu au fuctii de conducere in ordine descrescatoare dupa salariu---
+        System.out.println("\n--- Angajati care nu au fuctii de conducere in ordine descrescatoare dupa salariu ---");
 
         angajati
                 .stream()
@@ -95,8 +95,8 @@ public class MainApp {
                 .sorted((a, b)-> a.comparareSalar(b))
                 .forEach(System.out::println);
 
-        //5
-        System.out.println("\n---Lista de stringuri cu numele angajatilor cu majuscule---");
+        //5 ---Lista de stringuri cu numele angajatilor cu majuscule---
+        System.out.println("\n--- Lista de stringuri cu numele angajatilor cu majuscule ---");
 
         List<String> nume_angajati = angajati
                 .stream()
@@ -105,24 +105,24 @@ public class MainApp {
 
         nume_angajati.forEach(System.out::println);
 
-        //6
-        System.out.println("\n---Lista salariilor mai mici de 3000---");
+        //6 ---Lista salariilor mai mici de 3000---
+        System.out.println("\n--- Lista salariilor mai mici de 3000 ---");
         angajati
                 .stream()
                 .filter((a)->a.getSalar()<3000)
                 .map(Angajat::getSalar)
                 .forEach(System.out::println);
 
-        //7
-        System.out.println("\n---Primul angajat---");
+        //7 ---Afisarea primului angajat---
+        System.out.println("\n--- Primul angajat ---");
 
         angajati
                 .stream()
                 .min(Comparator.comparing(Angajat::getData_angajarii))
                 .ifPresentOrElse(System.out::println, System.out::println);
 
-        //8
-        System.out.println("\n---Statistici salarii---");
+        //8 ----------------------------------------
+        System.out.println("\n--- Statistici salarii ---");
 
         DoubleSummaryStatistics statistics = angajati.stream()
                                                      .collect(Collectors.summarizingDouble(Angajat::getSalar));
@@ -131,8 +131,8 @@ public class MainApp {
         System.out.println("Minim: " + statistics.getMin());
         System.out.println("Maxim: " + statistics.getMax());
 
-        //9
-        System.out.println("\n---Exista cel putin un \"Ion\"---");
+        //9 ----------------------------------------
+        System.out.println("\n--- Exista cel putin un \"Ion\" ---");
 
         angajati
                 .stream()
@@ -140,8 +140,8 @@ public class MainApp {
                 .findAny().ifPresentOrElse(Angajat::angajat_Ion_found, Angajat::angajat_Ion_not_found);
 
 
-        //10
-        System.out.println("\n---Numarul de persoane care s-au angajat in vara anului trecut---");
+        //10 ----------------------------------------
+        System.out.println("\n--- Numarul de persoane care s-au angajat in vara anului trecut ---");
 
         int nr_angajati_vara_trecuta = (int) angajati.stream()
                 .filter((a)-> (a.getData_angajarii().getYear()==LocalDate.now().getYear()-1
