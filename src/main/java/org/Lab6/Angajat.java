@@ -62,7 +62,7 @@ public class Angajat {
     public void setSalar(float salar) {
         this.salar = salar;
     }
-
+    
     public int comparareSalar(Angajat ang) {
         if (this.salar <= ang.getSalar()) {
             return 1;
@@ -73,7 +73,7 @@ public class Angajat {
 
     /**
      * Returneaza numele cu majuscule pentru lucrul cu stream-uri
-     * @return
+     * @return numele angajatului cu majuscule
      */
     public String numeToUpperCase(){
         return nume.toUpperCase();
