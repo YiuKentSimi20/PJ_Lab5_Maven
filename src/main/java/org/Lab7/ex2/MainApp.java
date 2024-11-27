@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class MainApp {
@@ -24,7 +23,7 @@ public class MainApp {
         try {
             ObjectMapper mapper = new ObjectMapper();
             File fis = new File("src/main/resources/instrumente_muzicale.json");
-            mapper.activateDefaultTyping(mapper.getPolymorphicTypeValidator());
+
             return mapper.readValue(fis, new TypeReference<HashSet<InstrumentMuzical>>() {});
         } catch(Exception e){
             e.printStackTrace();

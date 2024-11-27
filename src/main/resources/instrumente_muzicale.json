@@ -1,1 +1,59 @@
-[["org.Lab7.ex2.Chitara",{"producator":"Ibanez","pret":3000,"tipChitara":"ELECTRICA","nr_corzi":7}],["org.Lab7.ex2.Chitara",{"producator":"Takamine","pret":1200,"tipChitara":"ACUSTICA","nr_corzi":6}],["org.Lab7.ex2.Chitara",{"producator":"Fender","pret":2500,"tipChitara":"ELECTRICA","nr_corzi":6}],["org.Lab7.ex2.SetTobe",{"producator":"Yamaha","pret":3000,"tipTobe":"ACUSTICE","nr_tobe":4,"nr_cinele":2}],["org.Lab7.ex2.SetTobe",{"producator":"Fender","pret":1000,"tipTobe":"ELECTRONICE","nr_tobe":6,"nr_cinele":4}],["org.Lab7.ex2.SetTobe",{"producator":"Ibanez","pret":6700,"tipTobe":"ACUSTICE","nr_tobe":6,"nr_cinele":3}]]
+[
+  [
+    "org.Lab7.ex2.Chitara",
+    {
+      "producator" : "Ibanez",
+      "pret" : 3000,
+      "tipChitara" : "ELECTRICA",
+      "nr_corzi" : 7
+    }
+  ],
+  [
+    "org.Lab7.ex2.Chitara",
+    {
+      "producator" : "Takamine",
+      "pret" : 1200,
+      "tipChitara" : "ACUSTICA",
+      "nr_corzi" : 6
+    }
+  ],
+  [
+    "org.Lab7.ex2.Chitara",
+    {
+      "producator" : "Fender",
+      "pret" : 2500,
+      "tipChitara" : "ELECTRICA",
+      "nr_corzi" : 6
+    }
+  ],
+  [
+    "org.Lab7.ex2.SetTobe",
+    {
+      "producator" : "Yamaha",
+      "pret" : 3000,
+      "tipTobe" : "ACUSTICE",
+      "nr_tobe" : 4,
+      "nr_cinele" : 2
+    }
+  ],
+  [
+    "org.Lab7.ex2.SetTobe",
+    {
+      "producator" : "Fender",
+      "pret" : 1000,
+      "tipTobe" : "ELECTRONICE",
+      "nr_tobe" : 6,
+      "nr_cinele" : 4
+    }
+  ],
+  [
+    "org.Lab7.ex2.SetTobe",
+    {
+      "producator" : "Ibanez",
+      "pret" : 6700,
+      "tipTobe" : "ACUSTICE",
+      "nr_tobe" : 6,
+      "nr_cinele" : 3
+    }
+  ]
+]
